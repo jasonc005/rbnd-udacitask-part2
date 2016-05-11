@@ -46,4 +46,8 @@ class UdaciList
     end
   end
 
+  def change_priority (index, priority)
+    @items[index-1].priority = priority
+  end
+
 end
