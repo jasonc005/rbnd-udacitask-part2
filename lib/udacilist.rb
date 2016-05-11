@@ -39,7 +39,11 @@ class UdaciList
 
   def filter (item_type)
     filtered_array = @items.select {|item| item.type == item_type}
-    display_table(filtered_array)
+    if filtered_array.length > 0
+      display_table(filtered_array)
+    else
+      puts "There are no items of type #{item_type}"
+    end
   end
 
 end
