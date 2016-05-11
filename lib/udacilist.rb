@@ -21,12 +21,16 @@ class UdaciList
   end
 
   def all
-    puts "-" * @title.length
-    puts @title
-    puts "-" * @title.length
+    rows = []
     @items.each_with_index do |item, position|
-      puts "#{position + 1}) #{item.details}"
+      rows << [position+1, item.type, item.description, item.details]
+      rows << :separator
     end
+    rows.delete_at(rows.length - 1)
+
+    table = Terminal::Table.new :title => @title, :headings => ['','Type','Description','Details'], :rows => rows
+    puts table
+    puts "\n\n"
   end
 
 end
