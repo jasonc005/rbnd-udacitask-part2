@@ -6,7 +6,7 @@ class TodoItem
     @type = "todo"
     @description = description
     @due = options[:due] ? Chronic.parse(options[:due]) : options[:due]
-    @priority = options[:priority]
+    @priority = options[:priority] || "low"
   end
 
   def details
