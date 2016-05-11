@@ -1,13 +1,19 @@
 # What you added to Udacitask 2.0
 # -------------------------------------------------------
 1. What is the gem of your choice and how did you use it?
+  I decided to add the Terminal-Table gem to make the list output look better and easier to read.
 2. Describe the 2 features you added to the project.
-  a) Feature 1...
-  b) Feature 2...
+  a) Feature 1: All item types have priority values and they are automatically set to low if not provided.
+  b) Feature 2: Method in UdaciList to allow for changing priority values.
 
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
+  I spent probably about 4-5 hours working on this project.
 2. What was the most rewarding challenge you conquered?
+  The most rewarding challenge I conquered was learning how to use Ruby gems.
 3. What two additional features did you build? Why?
+  The two new features are as described above. I built these because I felt it would be more useful for all
+  items to have a priority value (rather than just Todo items) and for this value to be changed if necessary.
 4. Where do you still have room to grow?
+  I still have room to grow in writing cleaner code that is easier to read, less repetitive, and more efficient.
