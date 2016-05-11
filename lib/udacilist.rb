@@ -20,9 +20,9 @@ class UdaciList
     @items.delete_at(index - 1) if is_valid_index? (index)
   end
 
-  def all
+  def display_table(items)
     rows = []
-    @items.each_with_index do |item, position|
+    items.each_with_index do |item, position|
       rows << [position+1, item.type, item.description, item.details]
       rows << :separator
     end
@@ -31,6 +31,15 @@ class UdaciList
     table = Terminal::Table.new :title => @title, :headings => ['','Type','Description','Details'], :rows => rows
     puts table
     puts "\n\n"
+  end
+
+  def all
+    display_table(@items)
+  end
+
+  def filter (item_type)
+    filtered_array = @items.select {|item| item.type == item_type}
+    display_table(filtered_array)
   end
 
 end
